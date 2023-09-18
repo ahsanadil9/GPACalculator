@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GPA Calculation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="index.css" />
+    </head>
+    <body>
+        <img src="iqra_logo.png" alt="university of iqra" />
+        <p id="developedby">Developed by Muhammad Ahsan Adil</p>
+        <h1 class="star-animation">GPA CALCULATION</h1>
+        <button id="calculateButton" onclick="openHowToUseDialog()" title="How to use this site to calculate GPA? Click on this button">
+            How to use this site?
+        </button>
+        <dialog id="howToUseDialog">
+            <button class="close-button" onclick="closeHowToUseDialog()">✖</button>
+            <h2>INSTRUCTIONS</h2>
+            <p>1. Select Credit Hours and GPA for each course using the dropdown menus.</p>
+            <p>2. Click "Add Course" to add a course to the list of selected courses.</p>
+            <p>3. Courses will keep getting added below the selected courses.</p>
+            <p>4. To calculate the total GPA, click "Calculate Total GPA" after adding all your courses.</p>
+            <p>5. You can generate a PDF of the calculated GPA by clicking "Generate PDF."</p>
+            <p>6. If you require assistance, please feel free to contact me at adil.ahsan1218@gmail.com.</p>
+        </dialog>
+        <div>
+            <label for="courseNameInput">Course Name:</label>
+            <input type="text" id="courseNameInput" placeholder="write course name" />
+        </div>
+        <label for="creditHoursDropdown">Select Credit Hours:</label>
+        <select id="creditHoursDropdown">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <label for="gpaDropdown">Select GPA:</label>
+        <select id="gpaDropdown">
+            <option value="2">2</option>
+            <option value="2.5">2.5</option>
+            <option value="3">3</option>
+            <option value="3.5">3.5</option>
+            <option value="4">4</option>
+        </select>
+        <button onclick="addCourse()">Add Course</button>
+        <button id="generatePDFButton" onclick="generatePDF()">Generate PDF</button>
+        <h3 style="margin-top: 2.5rem">COURSES WILL BE DISPLAYED BELOW</h3>
+        <table id="selectedCoursesList" border="2">
+            <thead>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>GPA</th>
+                    <th>Grades</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Courses will be dynamically added here -->
+            </tbody>
+        </table>
+        <p class="bordered-p" style="color: #777">Total Credit Hours: <span id="totalCreditHours">0</span></p>
+        <button id="calculateButton1" class="red-button" onclick="calculateTotalGPA()">Calculate Total GPA</button>
+        <p class="bordered-p" style="color: #777">Total GPA: <span id="totalGPA">0</span> <span id="totalGPAGrade">Grades</span></p>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+        <script src="home.js"></script>
+    </body>
+</html>
