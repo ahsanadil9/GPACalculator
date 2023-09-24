@@ -1,321 +1,428 @@
-/* Reset some default browser styles */
+/* Width and color for the main scrollbar track */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-track {
+  background: #8d8484; /* Track color */
+}
+
+/* Styling for the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Thumb color */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+/* Hover state for the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb color on hover */
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 1px;
+  padding-top: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 8px;
+  box-sizing: border-box;
 }
-
-/* Set a background color and text color for the body */
 body {
-    background-color: #f5f5f5;
-    color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    line-height: 1.3;
-    /* text-align: center; */
+  background-color: rgb(75, 77, 75);
+  color: white;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 15px;
+  padding-bottom: 20rem;
 }
-.delete-button {
-    background-color: red;
-    color: white;
-    border: none;
-    cursor: pointer;
+.img-container {
+  overflow: hidden;
+  height: 115px;
 }
-.delete-button:hover {
-    background-color: darkred;
-}
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    margin-top: 5px;
+.img-container img {
+  max-width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: brightness(70%);
 }
 
-h1 {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+.dialog-content {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-right: 5px;
 }
-h1,
-p,
-button {
-    text-align: center;
+
+/* Style for the dialog itself */
+.dialog-items {
+  position: absolute;
+  top: 98%;
+  border-radius: 6px;
+  margin-left: auto;
+  left: 0;
+  display: none;
+  background-color: rgb(75, 77, 75);
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  max-width: 300px; /* Adjust the width as needed */
+  z-index: 1;
 }
-/* Add spacing to headings and paragraphs */
-h1,
+
+.instructionSite {
+  position: relative; /* Ensure the button is above the dialog */
+  z-index: 2;
+  display: block;
+  margin-left: auto;
+  padding: 5px 12px;
+  background-color: #5f6163;
+  margin-top: 2rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.instructionSite:hover {
+  background-color: #007bff;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px 0 rgb(64, 104, 179);
+}
+.dialog-items h2,
 p {
-    margin-bottom: 20px;
+  color: white;
 }
-h2 {
-    margin: 10px;
-}
-/* Style for images */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Add padding to buttons */
-button {
-    padding: 10px 20px;
-}
-
-/* Style for buttons */
-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-/* Style for the close button */
 .close-button {
-    position: absolute;
-    top: 0px;
-    right: 2px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: red;
-    font-size: 20px;
+  position: absolute;
+  top: 0px;
+  right: 2px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
 }
 .close-button:hover {
-    color: red;
-    background-color: transparent;
+  color: red;
+  background-color: transparent;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+#developedby {
+  color: #fffdfd;
+  background-color: rgb(75, 77, 75);
+  border-radius: 7px;
+  padding: 1px 0 1px 0;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.main-card {
+  box-shadow: 0 4px 12px 0 rgba(121, 95, 95, 0.2);
+  transition: 0.4s;
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgb(44, 46, 44);
+  margin: 1px;
+  padding: 4px 6px 50px 6px;
+}
+.inner-card {
+  box-shadow: 0 15px 30px 0 rgb(75, 77, 75);
+  transition: 0.4s;
+  width: 90%;
+  display: block;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 14px;
+  padding: 40px 8px;
+  background-color: transparent;
+}
+.gpa-calc {
+  font-family: "Tourney", cursive;
+  text-align: center;
+  color: white;
+  font-size: 5rem;
 }
 
-/* Style for input fields and select dropdowns */
-input[type='text'],
+.delete-button {
+  background-color: rgb(75, 77, 75);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 0.5px solid white;
+}
+.delete-button:hover {
+  background-color: red;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.add-course {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 67%;
+  border-radius: 10px;
+  background-color: rgb(75, 77, 75);
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  box-shadow: 0 2px 5px 0 rgb(71, 72, 73);
+}
+.add-course:hover {
+  background-color: #007bff;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px 0 rgb(64, 104, 179);
+}
+input[type="text"],
 select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+}
+input[type="text"],
+select:hover {
+  background-color: rgb(75, 77, 75);
+}
+input[type="text"],
+select,
+.gpa-dropdown option {
+  background-color: rgb(44, 46, 44);
+  color: white;
+  font-size: 1rem;
+}
+label {
+  display: flex;
+  justify-content: center;
 }
 
+.inner-card-end {
+  margin-top: 32px;
+  box-shadow: 0 18px 40px 0 rgb(75, 77, 75);
+  transition: 0.4s;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 14px;
+  padding: 20px 8px;
+  background-color: transparent;
+}
+.course-pdf,
+.calculated-gpa {
+  display: flex;
+  justify-content: space-between;
+}
+#generatePDFButton {
+  background-color: rgb(75, 77, 75);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+#generatePDFButton:hover {
+  background-color: #28a745;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.table-gpacalc {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.table-gpacalc p {
+  color: rgb(100, 102, 100);
+  font-size: 20px;
+}
 /* Style for the table */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 2px solid #ccc;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #ccc;
 }
 
 th,
 td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(75, 77, 75);
 }
 
 th {
-    background-color: #262629;
-    color: #fff;
+  background-color: rgb(33, 34, 33);
+  color: #fff;
 }
+.credit-hours-p {
+  display: flex;
+  justify-content: flex-end;
+  border: 2px solid #ccc;
+  margin-top: 2px;
+}
+
 /* Style for the "Total Credit Hours" and "Total GPA" display */
 #totalCreditHours,
 #totalGPA,
 #totalGPAGrade {
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #454647;
-    color: #fff;
-    border-radius: 4px;
-    display: inline-block;
-    margin-right: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 25px 10px 25px;
+  color: rgb(255, 255, 0);
+  border-radius: 4px;
+  background-color: #000000e8;
+  text-align: center;
+  box-shadow: inset 0 0 18px rgba(95, 95, 38, 0.432);
 }
 
-/* Style for the "Calculate Total GPA" button */
-#calculateButton {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 5px 10px;
-    margin-top: 135px;
-    position: absolute;
-    top: 20px;
-    right: 10px;
-}
-
-#calculateButton:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-/* Style for the "Generate PDF" button */
-
-#generatePDFButton {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 10px 20px;
-    position: absolute;
-    right: 10px;
-    z-index: 1;
-    width: auto;
-}
-#generatePDFButton:hover {
-    background-color: #1c7430;
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-/* Style for labels */
-label {
-    font-weight: bold;
-    color: #a9abad;
-}
-
-/* Style for plain text */
-p,
-span {
-    color: #333;
-}
-
-/* Style for the "Developed by" text */
-#developedby {
-    color: #fffdfd;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #0a0a0a;
-    margin-top: -1rem;
-}
-
-/* Style for the "Course Name:", "Select Gpa:", and "Total Credit Hours:" text */
-p:has-text('Course Name:'),
-p:has-text('Select Gpa:'),
-p:has-text('Total Credit Hours:') {
-    font-weight: bold;
-    color: #007bff;
-}
 /* Style for the red button */
-.red-button {
-    background-color: red;
-    color: rgb(255, 250, 250);
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 0.5rem;
+.calgpa-button {
+  background-color: rgb(75, 77, 75);
+  color: rgb(255, 250, 250);
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-.red-button:hover {
-    background-color: darkred;
-}
-/* Style for p elements with a black border */
-.bordered-p {
-    border: 1px solid rgb(151, 149, 149);
-    padding: 4px;
-    border-radius: 6px;
-}
-p {
-    color: #777;
+.calgpa-button:hover {
+  background-color: red;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
-/* Responsive layout for iPhone 6 and 7 (375x667) */
+/*---------------------------------------------------------------------------------*/
+/* Media query for screens smaller than 768px (e.g., mobile devices) */
 @media (max-width: 768px) {
-    /* For tablets: */
-    .col-s-1 {
-        width: 8.33%;
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Update other scrollbar styles as needed for smaller screens */
+  * {
+    margin: 1px;
+    padding: 8px 8px;
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+  .inner-card,
+  .inner-card-end {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .gpa-calc {
+    text-align: center;
+    font-size: 1.9rem;
+  }
+  .img-container img {
+    max-width: 80%;
+  }
+
+  .dialog-items {
+    max-width: 90%;
+  }
+
+  .inner-card,
+  .inner-card-end {
+    width: 100%;
+    padding: 0px;
+  }
+  .main-card {
+    border-radius: 8px;
+    padding-bottom: 25px;
+  }
+
+  .add-course {
+    width: 100%;
+  }
+  .course-pdf {
+    font-size: 8px;
+  }
+  input[type="text"],
+  select {
+    width: 100%;
+  }
+  .table-gpacalc {
+    width: 100%;
+  }
+  table {
+    font-size: 10px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .table-gpacalc p {
+    font-size: 13px;
+  }
+  #totalCreditHours,
+  #totalGPA,
+  #totalGPAGrade {
+    font-size: 10px;
+    font-weight: bold;
+    padding: 6px 14px 6px 14px;
+    color: rgb(255, 255, 0);
+    border-radius: 4px;
+    background-color: #000000e8;
+    text-align: center;
+    box-shadow: inset 0 0 18px rgba(95, 95, 38, 0.432);
+  }
+  .delete-button {
+    font-size: 7px;
+    padding: 4px 4px;
+  }
+  .calgpa-button {
+    font-size: 6px;
+    padding: 0 5px;
+  }
+  .credit-hours-p p,
+  .calculated-gpa p {
+    font-size: 9px;
+  }
+  /* For screens between 820px and 1180px */
+  @media (min-width: 821px) and (max-width: 1180px) {
+    ::-webkit-scrollbar {
+      width: 6px;
     }
-    .col-s-2 {
-        width: 16.66%;
-    }
-    .col-s-3 {
-        width: 25%;
-    }
-    .col-s-4 {
-        width: 33.33%;
-    }
-    .col-s-5 {
-        width: 41.66%;
-    }
-    .col-s-6 {
-        width: 50%;
-    }
-    .col-s-7 {
-        width: 58.33%;
-    }
-    .col-s-8 {
-        width: 66.66%;
-    }
-    .col-s-9 {
-        width: 75%;
-    }
-    .col-s-10 {
-        width: 83.33%;
-    }
-    .col-s-11 {
-        width: 91.66%;
-    }
-    .col-s-12 {
-        width: 100%;
-    }
-    [class*='col-'] {
-        width: 100%;
+
+    * {
+      margin: 1px;
+      padding: 6px 6px;
+      box-sizing: border-box;
     }
     body {
-        font-size: 14px;
+      font-size: 12px;
+      line-height: 1.2;
     }
-    img {
-        width: 70%;
+    .inner-card,
+    .inner-card-end {
+      padding-left: 8px;
+      padding-right: 8px;
     }
-    h1,
-    p,
-    button,
-    label {
-        text-align: center;
+    .gpa-calc {
+      text-align: center;
+      font-size: 1.8rem;
     }
-    h2 {
-        font-size: 18px;
+    .img-container img {
+      max-width: 75%;
     }
-    input[type='text'],
-    select {
-        font-size: 14px;
+    .calgpa-button {
+      font-size: 5px;
+      padding: 0 5px;
     }
-
-    button {
-        padding: 8px 16px;
+    .credit-hours-p p,
+    .calculated-gpa p {
+      font-size: 8px;
     }
-
-    /* Center the close button */
-    .close-button {
-        top: -3px;
-        right: -9px;
-    }
-
-    /* Adjust right position for buttons */
-    #calculateButton1,
-    #generatePDFButton {
-        right: 10px;
-        width: auto;
-    }
-    #calculateButton {
-        margin-top: 145px;
-        font-size: 13px;
-        right: 3px;
-    }
-
-    /* Center the table on smaller screens */
-    table {
-        margin: 0 auto;
-    }
+  }
 }
