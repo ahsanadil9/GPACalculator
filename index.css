@@ -26,6 +26,9 @@
   padding-bottom: 8px;
   box-sizing: border-box;
 }
+.head-logo {
+  display: none;
+}
 body {
   background-color: rgb(75, 77, 75);
   color: white;
