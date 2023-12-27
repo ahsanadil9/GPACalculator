@@ -23,7 +23,7 @@
     />
     <link
       rel="icon"
-      href="gpalogo/android-chrome-512x512.png"
+      href="Favicon/android-chrome-512x512.png"
       type="image/x-icon"
     />
     <link rel="icon" href="gpalogo/apple-touch-icon.png" type="image/x-icon" />
@@ -31,7 +31,6 @@
     <link rel="icon" href="gpalogo/favicon-32x32.png" type="image/x-icon" />
     <link rel="icon" href="gpalogo/favicon.ico" type="image/x-icon" />
 
-    <!-- HTML Meta Tags -->
     <title>GPA Calculator</title>
 
     <!-- Facebook Meta Tags -->
@@ -42,7 +41,10 @@
       property="og:description"
       content="Calculate your Iqra University GPA with ease using this specialized GPA Calculator. Please note that this calculator is designed exclusively for Iqra University students, as GPA criteria may vary across universities."
     />
-    <meta property="og:image" content="https://www.iugpacalculator.live/" />
+    <meta
+      property="og:image"
+      content="https://www.iugpacalculator.live/gpalogo.jpg"
+    />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -70,7 +72,7 @@
   </head>
   <body>
     <div class="img-container">
-      <img src="iqra_logo.png" alt="university of iqra" />
+      <img src="assets/iqra_logo.png" alt="university of iqra" />
     </div>
     <div class="dialog-content">
       <button
@@ -172,7 +174,6 @@
               <p>Total Credit Hours - <span id="totalCreditHours">0</span></p>
             </div>
           </div>
-          <!-- different tag -->
 
           <div class="calculated-gpa">
             <button
@@ -196,6 +197,6 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-    <script src="home.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
