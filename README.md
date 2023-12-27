@@ -13,7 +13,6 @@
 - [Images](#images)
 - [Responsive Design](#responsive-design)
 - [How to Use](#how-to-use)
-- [License](#license)
 
 ## Languages Used
 
