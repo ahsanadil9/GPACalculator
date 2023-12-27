@@ -1,3 +1,5 @@
+# IQRA UNIVERSITY GPA CALCULATOR 
+
 ## Table of Contents
 
 - [Languages Used](#languages-used)
@@ -43,7 +45,6 @@ For any questions or inquiries, please contact the developer at adil.ahsan1218@g
 ## Social Media Meta Tags
 
 - Facebook: [Iqra University GPA Calculator](https://www.iugpacalculator.live/)
-- Twitter: [@IqraGpaCalculator](https://twitter.com/IqraGpaCalculator)
 
 ## Icons
 
@@ -69,7 +70,3 @@ The website is designed to be responsive, ensuring a good user experience across
 4. To find your total GPA, click "Calculate GPA" after adding all your courses.
 5. You can also generate a PDF of your GPA calculation by clicking "Generate PDF."
 6. This website is exclusively for students of all campuses of Iqra University.
-
-## License
-
-[MIT License](LICENSE)
